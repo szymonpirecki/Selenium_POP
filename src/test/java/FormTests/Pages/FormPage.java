@@ -72,7 +72,7 @@ public class FormPage {
         return this;
     }
 
-    public List<WebElement> getSexBtns() {
+    public List<WebElement> getSexRadioBtns() {
         return sexRadioBtns;
     }
 
@@ -115,7 +115,7 @@ public class FormPage {
         return this;
     }
 
-    public WebElement getContinents() {
+    public WebElement getContinentSelect() {
         return continentsSelect;
     }
 
