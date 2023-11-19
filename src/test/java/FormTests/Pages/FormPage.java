@@ -72,6 +72,10 @@ public class FormPage {
         return this;
     }
 
+    public List<WebElement> getSexBtns() {
+        return sexRadioBtns;
+    }
+
     public FormPage selectSexBtn(String sex) {
         for (WebElement sexBtn : sexRadioBtns) {
             if (sexBtn.getAttribute("value").equalsIgnoreCase(sex)) {
@@ -81,13 +85,17 @@ public class FormPage {
         return this;
     }
 
-    public FormPage selectExpBtn(int yearOfExp) {
+    public FormPage selectExpBtn(String yearOfExp) {
         for (WebElement expBtn : expRadioBtns) {
-            if (expBtn.getAttribute("value").equals(String.valueOf(yearOfExp))) {
+            if (expBtn.getAttribute("value").equals(yearOfExp)) {
                 expBtn.click();
             }
         }
         return this;
+    }
+
+    public List<WebElement> getExpRadioBtns() {
+        return expRadioBtns;
     }
 
     public FormPage selectProfession(String profession) {
@@ -97,10 +105,18 @@ public class FormPage {
         return this;
     }
 
+    public List<WebElement> getProfessionCheckboxes() {
+        return professionCheckboxes;
+    }
+
     public FormPage selectContinent(String continent) {
         Select select = new Select(continentsSelect);
         select.selectByValue(continent);
         return this;
+    }
+
+    public WebElement getContinents() {
+        return continentsSelect;
     }
 
     public FormPage selectSeleniumCommands(List<String> commands) {
